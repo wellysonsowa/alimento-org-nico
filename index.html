@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Natureza Pura - Alimentos Orgânicos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+<body class="bg-green-50 text-gray-800">
+    <div class="h-6"></div> <!-- Espaço igual à altura do header -->
+
+  <!-- Cabeçalho -->
+  <header class="bg-green-700 text-white p-4 flex justify-between items-center fixed top-0 left-0 right-0 z-50">
+  <h1 class="text-2xl font-bold">Natureza Pura</h1>
+  <nav class="space-x-4 flex items-center">
+    <!-- seus links e carrinho -->
+<a href="sobre.html">Sobre</a>
+<a href="#produtos" class="hover:underline">Produtos</a>    
+<a href="contato.html">Contato</a>
+<a href="fontes.html">Fontes</a>
+
+      <!-- Carrinho -->
+      <div class="relative ml-4">
+        <button class="relative" onclick="abrirCarrinho()">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m13-9l2 9m-5-9v4m-4-4v4" />
+          </svg>
+          <span id="carrinho-contador" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <section class="bg-green-100 text-center py-12 px-4">
+    <h2 class="text-3xl font-bold mb-4">Alimentos orgânicos direto da terra para sua mesa</h2>
+    <p class="text-lg">Saudável, sustentável e com muito sabor!</p>
+  </section>
+
+
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrossel com Swiper</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+</head>
+<body class="bg-gray-100">
+
+  <!-- Seção do Carrossel -->
+  <section class="py-10 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="swiper rounded-xl overflow-hidden">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="hortalicas.jpg" alt="Hortaliças" class="w-full h-[500px] object-cover" />
+          </div>
+          <div class="swiper-slide">
+            <img src="02-destaque.jpg" alt="Destaque" class="w-full h-[500px] object-cover" />
+          </div>
+          <div class="swiper-slide">
+            <img src="alimentos-organicos.jpg" alt="Orgânicos" class="w-full h-[500px] object-cover" />
+          </div>
+          <div class="swiper-slide">
+            <img src="estufa-para-hortalicas-organicas-como-montar.jpg" alt="Orgânicos" class="w-full h-[500px] object-cover" />
+          </div>
+        </div>
+
+        <!-- Paginação -->
+        <div class="swiper-pagination"></div>
+
+        <!-- Botões de navegação -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Inicialização do Swiper -->
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>
+
+<!-- Sobre nós -->
+  <section id="sobre" class="py-10 px-6 max-w-4xl mx-auto">
+    <h3 class="text-2xl font-bold mb-4">Quem somos</h3>
+    <p>Somos uma pequena barraquinha familiar dedicada à produção e venda de alimentos orgânicos, cultivados com respeito à natureza e à saúde das pessoas. Entregamos em várias cidades com amor e qualidade.</p>
+  </section>
+
+
+   <!-- Loja / Vendas -->
+   <section id="produtos" class="py-10 px-6 max-w-4xl mx-auto"></section>
+ <section id="vendas" class="py-10 px-6 bg-green-50">
+  <h3 class="text-3xl font-bold mb-8 text-center text-green-800">Produtos Orgânicos</h3>
+  <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+  
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <img src="cenoura.jpg" alt="Cenoura Orgânica" class="w-full h-60 object-cover" />
+      <div class="p-4">
+        <h4 class="font-bold text-xl text-green-700">Cenoura Orgânica</h4>
+        <p class="text-gray-600 mb-4">1kg - R$ 7,00</p>
+        <button onclick="adicionarAoCarrinho('Cenoura Orgânica', 7.00)" class="bg-green-700 text-white w-full py-2 rounded hover:bg-green-800 transition">Adicionar ao carrinho</button>
+      </div>
+    </div>
+
+ 
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <img src="alface.jpg" alt="Alface Crespa" class="w-full h-60 object-cover" />
+      <div class="p-4">
+        <h4 class="font-bold text-xl text-green-700">Alface Crespa</h4>
+        <p class="text-gray-600 mb-4">Unidade - R$ 4,50</p>
+        <button onclick="adicionarAoCarrinho('Alface Crespa', 4.50)" class="bg-green-700 text-white w-full py-2 rounded hover:bg-green-800 transition">Adicionar ao carrinho</button>
+      </div>
+    </div>
+
+    
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <img src="tomate-italiano-fundo-branco.jpeg" alt="Tomate Italiano" class="w-full h-60 object-cover" />
+      <div class="p-4">
+        <h4 class="font-bold text-xl text-green-700">Tomate Italiano</h4>
+        <p class="text-gray-600 mb-4">1kg - R$ 5,00</p>
+        <button onclick="adicionarAoCarrinho('Tomate Italiano', 5.00)" class="bg-green-700 text-white w-full py-2 rounded hover:bg-green-800 transition">Adicionar ao carrinho</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+   <section id="produtos" class="py-10 px-6 max-w-4xl mx-auto"></section>
+ <section id="vendas" class="py-10 px-6 bg-green-50">
+  <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+  
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <img src="Batata-doce.webp" alt="Batata-doce" class="w-full h-60 object-cover" />
+      <div class="p-4">
+        <h4 class="font-bold text-xl text-green-700">Batata-doce</h4>
+        <p class="text-gray-600 mb-4">1kg - R$ 7,00</p>
+        <button onclick="adicionarAoCarrinho('Batata-doce', 7.00)" class="bg-green-700 text-white w-full py-2 rounded hover:bg-green-800 transition">Adicionar ao carrinho</button>
+      </div>
+    </div>
+
+ 
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <img src="Abobrinha.jpeg" alt="Abobrinha" class="w-full h-60 object-cover" />
+      <div class="p-4">
+        <h4 class="font-bold text-xl text-green-700">abobrinha</h4>
+        <p class="text-gray-600 mb-4">1kg - R$ 9,00</p>
+        <button onclick="adicionarAoCarrinho('abobrinha', 9.00)" class="bg-green-700 text-white w-full py-2 rounded hover:bg-green-800 transition">Adicionar ao carrinho</button>
+      </div>
+    </div>
+
+    
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <img src="Couve.jpg" alt="Couve" class="w-full h-60 object-cover" />
+      <div class="p-4">
+        <h4 class="font-bold text-xl text-green-700">couve</h4>
+        <p class="text-gray-600 mb-4">1kg - R$ 5,00</p>
+        <button onclick="adicionarAoCarrinho(' Couve', 5.00)" class="bg-green-700 text-white w-full py-2 rounded hover:bg-green-800 transition">Adicionar ao carrinho</button>
+      </div>
+    </div>
+  </div>
+
+     <section id="produtos" class="py-10 px-6 max-w-4xl mx-auto"></section>
+ <section id="vendas" class="py-10 px-6 bg-green-50">
+  <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <img src="brocolis.jpg" alt="Brócolis" class="w-full h-60 object-cover" />
+      <div class="p-4">
+        <h4 class="font-bold text-xl text-green-700">Brócolis</h4>
+        <p class="text-gray-600 mb-4">Pacote com 1kg - R$ 10,00</p>
+        <button onclick="adicionarAoCarrinho('Brócolis', 10.00)" class="bg-green-700 text-white w-full py-2 rounded hover:bg-green-800 transition">Adicionar ao carrinho</button>
+      </div>
+    </div>
+
+ 
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <img src="Morango.jpg" alt="Morango" class="w-full h-60 object-cover" />
+      <div class="p-4">
+        <h4 class="font-bold text-xl text-green-700">Morango</h4>
+        <p class="text-gray-600 mb-4">caixa 250g - R$ 15,00</p>
+        <button onclick="adicionarAoCarrinho('Morango', 15.00)" class="bg-green-700 text-white w-full py-2 rounded hover:bg-green-800 transition">Adicionar ao carrinho</button>
+      </div>
+    </div>
+
+    
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <img src="Banana_pratapng.png" alt=". Banana" class="w-full h-60 object-cover" />
+      <div class="p-4">
+        <h4 class="font-bold text-xl text-green-700">. Banana</h4>
+        <p class="text-gray-600 mb-4">akg - R$ 6,00</p>
+        <button onclick="adicionarAoCarrinho('.Banana', 6.00)" class="bg-green-700 text-white w-full py-2 rounded hover:bg-green-800 transition">Adicionar ao carrinho</button>
+      </div>
+    </div>
+  </div>
+</section>
+   <section id="produtos" class="py-10 px-6 max-w-4xl mx-auto"></section>
+ <section id="vendas" class="py-10 px-6 bg-green-50">
+  <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+  
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <img src="Maçã.jpg" alt="Maçã" class="w-full h-60 object-cover" />
+      <div class="p-4">
+        <h4 class="font-bold text-xl text-green-700">Maçã</h4>
+        <p class="text-gray-600 mb-4">1kg - R$ 12,00</p>
+        <button onclick="adicionarAoCarrinho('Maçã', 12.00)" class="bg-green-700 text-white w-full py-2 rounded hover:bg-green-800 transition">Adicionar ao carrinho</button>
+      </div>
+    </div>
+
+ 
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <img src="Laranja.jpg" alt="Laranja" class="w-full h-60 object-cover" />
+      <div class="p-4">
+        <h4 class="font-bold text-xl text-green-700">Laranja</h4>
+        <p class="text-gray-600 mb-4">1kg - R$ 6,50</p>
+        <button onclick="adicionarAoCarrinho('Laranja', 6.50)" class="bg-green-700 text-white w-full py-2 rounded hover:bg-green-800 transition">Adicionar ao carrinho</button>
+      </div>
+    </div>
+
+    
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <img src="Mamão.webp" alt="Mamão" class="w-full h-60 object-cover" />
+      <div class="p-4">
+        <h4 class="font-bold text-xl text-green-700">Mamão</h4>
+        <p class="text-gray-600 mb-4">1kg - R$ 7,00</p>
+        <button onclick="adicionarAoCarrinho('Mamão', 7.00)" class="bg-green-700 text-white w-full py-2 rounded hover:bg-green-800 transition">Adicionar ao carrinho</button>
+      </div>
+    </div>
+  </div>
+</section>
+   <section id="produtos" class="py-10 px-6 max-w-4xl mx-auto"></section>
+ <section id="vendas" class="py-10 px-6 bg-green-50">
+  <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+  
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <img src="Melancia.jpg" alt="Melancia" class="w-full h-60 object-cover" />
+      <div class="p-4">
+        <h4 class="font-bold text-xl text-green-700">Melancia</h4>
+        <p class="text-gray-600 mb-4">1kg - R$ 5,00</p>
+        <button onclick="adicionarAoCarrinho('Melancia', 5.00)" class="bg-green-700 text-white w-full py-2 rounded hover:bg-green-800 transition">Adicionar ao carrinho</button>
+      </div>
+    </div>
+
+ 
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <img src="Uva.jpg" alt="Uva" class="w-full h-60 object-cover" />
+      <div class="p-4">
+        <h4 class="font-bold text-xl text-green-700">Uva</h4>
+        <p class="text-gray-600 mb-4">Unidade - R$ 14,50</p>
+        <button onclick="adicionarAoCarrinho('Uva', 14.50)" class="bg-green-700 text-white w-full py-2 rounded hover:bg-green-800 transition">Adicionar ao carrinho</button>
+      </div>
+    </div>
+
+    
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <img src="arroz-integral.png" alt="Arroz integral" class="w-full h-60 object-cover" />
+      <div class="p-4">
+        <h4 class="font-bold text-xl text-green-700">Arroz integral</h4>
+        <p class="text-gray-600 mb-4">Pacote com 250g- R$ 12,00</p>
+        <button onclick="adicionarAoCarrinho('Arroz integral', 12.00)" class="bg-green-700 text-white w-full py-2 rounded hover:bg-green-800 transition">Adicionar ao carrinho</button>
+      </div>
+    </div>
+  </div>
+</section>
+   <section id="produtos" class="py-10 px-6 max-w-4xl mx-auto"></section>
+ <section id="vendas" class="py-10 px-6 bg-green-50">
+  <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+  
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <img src="Feijao-preto.png" alt="Feijão preto" class="w-full h-60 object-cover" />
+      <div class="p-4">
+        <h4 class="font-bold text-xl text-green-700">Feijão preto</h4>
+        <p class="text-gray-600 mb-4">Pacote com 250g - R$ 5,00</p>
+        <button onclick="adicionarAoCarrinho('Feijão preto', 5.00)" class="bg-green-700 text-white w-full py-2 rounded hover:bg-green-800 transition">Adicionar ao carrinho</button>
+      </div>
+    </div>
+
+ 
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <img src="Quinoa.png" alt="Quinoa" class="w-full h-60 object-cover" />
+      <div class="p-4">
+        <h4 class="font-bold text-xl text-green-700">Quinoa</h4>
+        <p class="text-gray-600 mb-4">Pacote com 250g - R$ 15,50</p>
+        <button onclick="adicionarAoCarrinho('Quinoa', 15.50)" class="bg-green-700 text-white w-full py-2 rounded hover:bg-green-800 transition">Adicionar ao carrinho</button>
+      </div>
+    </div>
+
+    
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <img src="Aveia.webp" alt="Aveia" class="w-full h-60 object-cover" />
+      <div class="p-4">
+        <h4 class="font-bold text-xl text-green-700">Aveia</h4>
+        <p class="text-gray-600 mb-4">Pacote com 250g - R$ 8,00</p>
+        <button onclick="adicionarAoCarrinho('Aveia', 8.00)" class="bg-green-700 text-white w-full py-2 rounded hover:bg-green-800 transition">Adicionar ao carrinho</button>
+      </div>
+    </div>
+  </div>
+</section>
+   <section id="produtos" class="py-10 px-6 max-w-4xl mx-auto"></section>
+ <section id="vendas" class="py-10 px-6 bg-green-50">
+  <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+  
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <img src="leite-integral-organico-1l-timbauba.jpg" alt="Leite orgânico" class="w-full h-60 object-cover" />
+      <div class="p-4">
+        <h4 class="font-bold text-xl text-green-700">Leite orgânico</h4>
+        <p class="text-gray-600 mb-4">R$ 7,50 (litro)</p>
+        <button onclick="adicionarAoCarrinho('Leite orgânico', 7.50)" class="bg-green-700 text-white w-full py-2 rounded hover:bg-green-800 transition">Adicionar ao carrinho</button>
+      </div>
+    </div>
+
+ 
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <img src="Morango.jpg" alt="Queijo fresco" class="w-full h-60 object-cover" />
+      <div class="p-4">
+        <h4 class="font-bold text-xl text-green-700">Queijo fresco</h4>
+        <p class="text-gray-600 mb-4">Unidade - R$ 34,50</p>
+        <button onclick="adicionarAoCarrinho('Queijo fresco', 34.50)" class="bg-green-700 text-white w-full py-2 rounded hover:bg-green-800 transition">Adicionar ao carrinho</button>
+      </div>
+    </div>
+
+    
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <img src="Ovo caipira orgânico.webp" alt="Ovo caipira" class="w-full h-60 object-cover" />
+      <div class="p-4">
+        <h4 class="font-bold text-xl text-green-700">Ovo caipira</h4>
+        <p class="text-gray-600 mb-4">R$ 12,00 (dúzia)</p>
+        <button onclick="adicionarAoCarrinho('Ovo caipira', 12.00)" class="bg-green-700 text-white w-full py-2 rounded hover:bg-green-800 transition">Adicionar ao carrinho</button>
+      </div>
+    </div>
+  </div>
+</section>
+   <section id="produtos" class="py-10 px-6 max-w-4xl mx-auto"></section>
+ <section id="vendas" class="py-10 px-6 bg-green-50">
+  <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+  
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <img src="Mel puro.webp" alt="Mel puro" class="w-full h-60 object-cover" />
+      <div class="p-4">
+        <h4 class="font-bold text-xl text-green-700">Mel puro</h4>
+        <p class="text-gray-600 mb-4">250g - R$ 15,00</p>
+        <button onclick="adicionarAoCarrinho('Mel puro', 15.00)" class="bg-green-700 text-white w-full py-2 rounded hover:bg-green-800 transition">Adicionar ao carrinho</button>
+      </div>
+    </div>
+
+ 
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <img src="Café orgânico.webp" alt="Café orgânico" class="w-full h-60 object-cover" />
+      <div class="p-4">
+        <h4 class="font-bold text-xl text-green-700">Café orgânico</h4>
+        <p class="text-gray-600 mb-4">250g - R$ 25,50</p>
+        <button onclick="adicionarAoCarrinho('Café orgânico', 25.50)" class="bg-green-700 text-white w-full py-2 rounded hover:bg-green-800 transition">Adicionar ao carrinho</button>
+      </div>
+    </div>
+
+    
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <img src="Chocolate orgânico.jpg" alt="Chocolate orgânico" class="w-full h-60 object-cover" />
+      <div class="p-4">
+        <h4 class="font-bold text-xl text-green-700">Chocolate orgânico</h4>
+        <p class="text-gray-600 mb-4">R$ 25,00 (barra 80g)</p>
+        <button onclick="adicionarAoCarrinho('Chocolate orgânico', 25.00)" class="bg-green-700 text-white w-full py-2 rounded hover:bg-green-800 transition">Adicionar ao carrinho</button>
+      </div>
+    </div>
+  </div>
+</section>
+    
+   
+<!-- Carrinho Modal -->
+  <div id="carrinho-modal" class="fixed top-0 right-0 w-full md:w-96 h-full bg-white shadow-lg p-4 z-50 hidden overflow-y-auto">
+    <h3 class="text-xl font-bold mb-4">Seu carrinho</h3>
+    <ul id="lista-carrinho" class="space-y-2"></ul>
+    <p class="mt-4 font-bold">Total: R$ <span id="total-carrinho">0.00</span></p>
+    <button onclick="enviarPedido()" class="mt-4 bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800">Finalizar pedido</button>
+    <button onclick="fecharCarrinho()" class="mt-2 text-sm underline">Fechar</button>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="bg-green-700 text-white text-center p-4 mt-8">
+    <p>&copy; 2025 Natureza Pura. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const carrinho = [];
+
+    function adicionarAoCarrinho(produto, preco) {
+      carrinho.push({ produto, preco });
+      atualizarCarrinho();
+    }
+
+    function atualizarCarrinho() {
+      const contador = document.getElementById('carrinho-contador');
+      const lista = document.getElementById('lista-carrinho');
+      const totalSpan = document.getElementById('total-carrinho');
+
+      contador.textContent = carrinho.length;
+      lista.innerHTML = '';
+
+      let total = 0;
+      carrinho.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.produto} - R$ ${item.preco.toFixed(2)}`;
+        lista.appendChild(li);
+        total += item.preco;
+      });
+
+      totalSpan.textContent = total.toFixed(2);
+    }
+
+    function abrirCarrinho() {
+      document.getElementById('carrinho-modal').classList.remove('hidden');
+    }
+
+    function fecharCarrinho() {
+      document.getElementById('carrinho-modal').classList.add('hidden');
+    }
+
+ function enviarPedido() {
+  const nome = prompt("Digite seu nome:");
+  if (!nome) return;
+
+  const telefone = prompt("Digite seu telefone:");
+  if (!telefone) return;
+
+  const endereco = prompt("Digite seu endereço:");
+  if (!endereco) return;
+
+  const total = carrinho.reduce((sum, item) => sum + item.preco, 0);
+  const itens = carrinho.map(item => `• ${item.produto} - R$ ${item.preco.toFixed(2)}`).join('\n');
+
+  const resumo = `📦 Pedido de: ${nome}\n📱 Telefone: ${telefone}\n🏠 Endereço: ${endereco}\n\nItens:\n${itens}\n\n💰 Total: R$ ${total.toFixed(2)}`;
+
+  console.log("Pedido simulado:\n" + resumo);
+  alert("Pedido finalizado com sucesso!\n\n" + resumo);
+
+  carrinho.length = 0;
+  atualizarCarrinho();
+  fecharCarrinho();
+}
+
+  </script>
+
+</body>
+</html>
